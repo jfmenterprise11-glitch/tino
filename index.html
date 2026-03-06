@@ -1,14 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tino's Landscape, Lighting & Construction</title>
 
-<title>Cactus Landscaping LLC</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,95 +13,84 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f0f0f;
 color:white;
+background:url("grass.jpg") no-repeat center center fixed;
+background-size:cover;
 }
 
+/* NAV */
+
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,.85);
-padding:18px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:1000;
+padding:20px 10%;
+backdrop-filter:blur(6px);
 }
 
-nav h2{
-color:#3ddc84;
+nav h1{
+font-size:22px;
 }
 
 nav a{
-color:white;
-margin-left:25px;
+margin-left:20px;
 text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.cta{
+background:#2ecc71;
+padding:10px 18px;
+border-radius:6px;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
-background:url("https://images.unsplash.com/photo-1598902108854-10e335adac99") center/cover fixed;
+height:90vh;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
+align-items:center;
 text-align:center;
 }
 
-.hero-box{
-background:rgba(0,0,0,.6);
-padding:60px;
-border-radius:10px;
-max-width:700px;
-}
-
-.hero h1{
-font-size:48px;
+.hero h2{
+font-size:60px;
 margin-bottom:15px;
+text-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
 .hero p{
-margin-bottom:25px;
+font-size:20px;
+max-width:600px;
+margin-bottom:30px;
 }
 
-.btn{
-padding:14px 28px;
+.hero button{
+padding:15px 30px;
+font-size:18px;
 border:none;
-border-radius:30px;
-cursor:pointer;
-font-size:16px;
-margin:5px;
-}
-
-.primary{
-background:#3ddc84;
-color:black;
-font-weight:600;
-}
-
-.secondary{
-background:transparent;
-border:2px solid white;
+background:#27ae60;
 color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 10%;
 }
 
 /* SERVICES */
 
-.services{
-padding:100px 20px;
-text-align:center;
-background:transparent;
-}
-
-.service-grid{
-max-width:1100px;
-margin:auto;
+.services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
@@ -112,110 +98,120 @@ margin-top:40px;
 }
 
 .service{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(6px);
 padding:30px;
+backdrop-filter:blur(6px);
+background:rgba(255,255,255,0.08);
 border-radius:10px;
-}
-
-/* WHY */
-
-.why{
-padding:100px 20px;
-background:transparent;
 text-align:center;
 }
 
-.why-grid{
-max-width:700px;
-margin:auto;
-text-align:left;
-margin-top:40px;
+.service h3{
+margin-bottom:10px;
 }
 
-.why-grid ul{
+.service button{
+margin-top:15px;
+padding:10px 18px;
+border:none;
+background:#27ae60;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* WHY CHOOSE */
+
+.why{
+max-width:700px;
+margin:auto;
+backdrop-filter:blur(6px);
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:10px;
+}
+
+.why h2{
+margin-bottom:20px;
+text-align:center;
+}
+
+.why ul{
 list-style:none;
-line-height:2;
+}
+
+.why li{
+margin-bottom:15px;
 font-size:18px;
 }
 
-.why-grid li::before{
-content:"✔";
-color:#3ddc84;
-font-weight:bold;
-margin-right:10px;
+.why li::before{
+content:"✔ ";
+color:#2ecc71;
+margin-right:5px;
 }
 
 /* REVIEWS */
 
 .reviews{
-padding:100px 20px;
-text-align:center;
-}
-
-.review-grid{
-max-width:1000px;
-margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 margin-top:40px;
 }
 
 .review{
-background:rgba(255,255,255,0.06);
+background:rgba(255,255,255,0.12);
 backdrop-filter:blur(8px);
 padding:25px;
 border-radius:10px;
 }
 
-/* MAP */
+/* CONTACT */
 
-.map{
-background:#121212;
-padding:100px 20px;
-text-align:center;
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:40px;
 }
 
-/* FLOAT BUTTONS */
+.contact-info{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(8px);
+padding:30px;
+border-radius:10px;
+}
+
+.contact-info h3{
+margin-bottom:20px;
+}
+
+.contact-info p{
+margin-bottom:10px;
+}
 
 .call-btn{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
+margin-top:20px;
+display:inline-block;
+background:#27ae60;
+padding:12px 20px;
+border-radius:6px;
 text-decoration:none;
-font-weight:bold;
-}
-
-.estimate-btn{
-position:fixed;
-bottom:90px;
-right:25px;
-background:#3ddc84;
-color:black;
-padding:15px 20px;
-border-radius:50px;
-font-weight:bold;
-cursor:pointer;
+color:white;
 }
 
 /* POPUP */
 
 .popup{
-display:none;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.7);
-align-items:center;
+background:rgba(0,0,0,0.6);
+display:none;
 justify-content:center;
-z-index:2000;
+align-items:center;
 }
 
 .popup-content{
@@ -223,123 +219,138 @@ background:white;
 color:black;
 padding:40px;
 border-radius:10px;
-width:90%;
-max-width:450px;
+width:400px;
+}
+
+.popup-content h3{
+margin-bottom:15px;
 }
 
 .popup-content input,
 .popup-content textarea,
 .popup-content select{
 width:100%;
-margin-bottom:12px;
-padding:12px;
-border-radius:6px;
+margin-bottom:10px;
+padding:10px;
 border:1px solid #ccc;
+border-radius:6px;
+}
+
+.popup-content button{
+width:100%;
+padding:12px;
+background:#27ae60;
+color:white;
+border:none;
+border-radius:6px;
 }
 
 .close{
 float:right;
 cursor:pointer;
-font-size:22px;
+font-size:18px;
 }
 
-.submit{
-background:#3ddc84;
-border:none;
-padding:12px;
-cursor:pointer;
-width:100%;
-font-weight:600;
+@media(max-width:900px){
+
+.services-grid{
+grid-template-columns:1fr;
 }
 
-footer{
-background:black;
-padding:40px;
-text-align:center;
+.reviews{
+grid-template-columns:1fr;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero h2{
+font-size:38px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<h2>Cactus Landscaping LLC</h2>
+
+<h1>Tino's Landscape</h1>
 
 <div>
+<a href="#">Home</a>
 <a href="#services">Services</a>
-<a href="#reviews">Reviews</a>
+<a href="#why">Why Choose Us</a>
 <a href="#contact">Contact</a>
+<a class="cta" onclick="openPopup()">Get Free Estimate</a>
 </div>
 
 </nav>
 
 <section class="hero">
 
-<div class="hero-box">
+<h2>Beautiful Outdoor Spaces</h2>
 
-<h1>Professional Landscaping Services</h1>
+<p>Professional landscaping, lighting and construction services designed to transform your property.</p>
 
-<p>4.9 ⭐ Rating — 27 Happy Customers</p>
-
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
-
-<a href="tel:+14802700734">
-<button class="btn secondary">Call Now</button>
-</a>
-
-</div>
+<button onclick="openPopup()">Get Free Estimate</button>
 
 </section>
 
-<section class="services" id="services">
+<section id="services">
 
-<h2>Our Services</h2>
+<h2 style="text-align:center;">Our Services</h2>
 
-<div class="service-grid">
+<div class="services-grid">
 
 <div class="service">
 <h3>Landscape Design</h3>
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
+<p>Custom landscape design to enhance your home's beauty.</p>
+<button onclick="openPopup()">Get Free Estimate</button>
 </div>
 
 <div class="service">
-<h3>Paver & Patio Installation</h3>
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
+<h3>Landscape Lighting</h3>
+<p>Elegant outdoor lighting that highlights your property.</p>
+<button onclick="openPopup()">Get Free Estimate</button>
 </div>
 
 <div class="service">
-<h3>Outdoor Lighting</h3>
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
+<h3>Hardscape Construction</h3>
+<p>Patios, walkways, retaining walls and outdoor features.</p>
+<button onclick="openPopup()">Get Free Estimate</button>
 </div>
 
 <div class="service">
-<h3>Garden & Backyard Design</h3>
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
+<h3>Artificial Turf</h3>
+<p>Low maintenance synthetic grass installation.</p>
+<button onclick="openPopup()">Get Free Estimate</button>
 </div>
 
 <div class="service">
-<h3>Stone Work</h3>
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
+<h3>Irrigation Systems</h3>
+<p>Smart watering systems to keep your landscape healthy.</p>
+<button onclick="openPopup()">Get Free Estimate</button>
 </div>
 
 <div class="service">
-<h3>Outdoor Construction</h3>
-<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
+<h3>Outdoor Renovations</h3>
+<p>Complete backyard transformations.</p>
+<button onclick="openPopup()">Get Free Estimate</button>
 </div>
 
 </div>
 
 </section>
 
-<section class="why">
+<section id="why">
+
+<div class="why">
 
 <h2>Why Choose Us</h2>
-
-<p>We're committed to delivering exceptional landscaping services that transform your outdoor space into a beautiful retreat you'll love for years to come.</p>
-
-<div class="why-grid">
 
 <ul>
 <li>Experienced Landscaping Team</li>
@@ -353,75 +364,61 @@ text-align:center;
 
 </section>
 
-<section class="reviews" id="reviews">
+<section>
 
-<h2>Customer Reviews</h2>
+<h2 style="text-align:center;">Customer Reviews</h2>
 
-<div class="review-grid">
+<div class="reviews">
 
 <div class="review">
-⭐⭐⭐⭐⭐
-<p>Jesus and team are great. I've been using them for years and they always deliver excellent work.</p>
-<b>Marc Smith</b>
+⭐⭐⭐⭐⭐  
+"Excellent landscaping work. Our yard looks incredible."
 </div>
 
 <div class="review">
-⭐⭐⭐⭐⭐
-<p>Fast, efficient, and extremely thorough. Highly recommend Cactus Landscaping.</p>
-<b>Eddie Barajas</b>
+⭐⭐⭐⭐⭐  
+"Very professional and completed our project quickly."
 </div>
 
 <div class="review">
-⭐⭐⭐⭐
-<p>Good lawn maintenance and landscaping services overall.</p>
-<b>Brian Billings</b>
+⭐⭐⭐⭐⭐  
+"Highly recommend Tino's Landscape!"
 </div>
 
 </div>
 
 </section>
 
-<section class="map" id="contact">
+<section id="contact">
 
-<h2>Service Area</h2>
+<h2 style="text-align:center;">Contact Us</h2>
 
-<br>
+<div class="contact-grid">
 
-<div style="display:grid;grid-template-columns:1fr 350px;gap:40px;max-width:1100px;margin:auto;align-items:start;">
+<iframe 
+src="https://maps.google.com/maps?q=Arizona&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="350" style="border:0;border-radius:10px;">
+</iframe>
 
-<iframe src="https://maps.google.com/maps?q=Arizona&t=&z=10&ie=UTF8&iwloc=&output=embed"
-style="width:100%;height:420px;border:0;border-radius:10px;"></iframe>
+<div class="contact-info">
 
-<div style="background:rgba(255,255,255,0.07);backdrop-filter:blur(8px);padding:30px;border-radius:10px;">
+<h3>Contact Information</h3>
 
-<h3 style="margin-bottom:20px;font-size:22px;font-weight:bold;">Contact Information</h3>
+<p>📍 Location: Arizona</p>
+<p>📞 Phone: +1 480-270-0734</p>
 
-<p>📍 <strong>Location</strong><br>
-Arizona</p>
+<p>⏰ Hours</p>
 
-<br>
+<p>Thursday 7:30 AM–3 PM</p>
+<p>Friday 7:30 AM–2 PM</p>
+<p>Saturday Closed</p>
+<p>Sunday Closed</p>
+<p>Monday 7:30 AM–5 PM</p>
+<p>Tuesday 7:30 AM–3 PM</p>
+<p>Wednesday 7:30 AM–3 PM</p>
 
-<p>📞 <strong>Phone</strong><br>
-<a href="tel:+14802700734" style="color:#3ddc84;text-decoration:none;">+1 480-270-0734</a></p>
-
-<br>
-
-<p>🕒 <strong>Hours</strong><br>
-Thursday – 7:30 AM–3 PM<br>
-Friday – 7:30 AM–2 PM<br>
-Saturday – Closed<br>
-Sunday – Closed<br>
-Monday – 7:30 AM–5 PM<br>
-Tuesday – 7:30 AM–3 PM<br>
-Wednesday – 7:30 AM–3 PM
-</p>
-
-<br>
-
-<a href="tel:+14802700734">
-<button style="background:#3ddc84;color:black;width:100%;padding:14px;border:none;border-radius:999px;font-weight:600;cursor:pointer;">
+<a class="call-btn" href="tel:+14802700734">
 Call Now For Free Estimate
-</button>
 </a>
 
 </div>
@@ -430,53 +427,37 @@ Call Now For Free Estimate
 
 </section>
 
-<footer>
-
-<p>© 2026 Cactus Landscaping LLC</p>
-<p>📞 +1 480-270-0734</p>
-
-</footer>
-
-<div class="estimate-btn" onclick="openForm()">Get Free Estimate</div>
-
-<a href="tel:+14802700734" class="call-btn">📞 Call</a>
+<!-- POPUP FORM -->
 
 <div class="popup" id="popup">
 
 <div class="popup-content">
 
-<span class="close" onclick="closeForm()">✕</span>
+<span class="close" onclick="closePopup()">✖</span>
 
-<h2>Get Free Estimate</h2>
+<h3>Free Estimate</h3>
 
-<form name="estimate" method="POST" data-netlify="true">
+<input type="text" placeholder="Name">
 
-<input type="hidden" name="form-name" value="estimate">
+<input type="email" placeholder="Email">
 
-<input type="text" name="name" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number">
 
-<input type="email" name="email" placeholder="Email" required>
-
-<input type="tel" name="phone" placeholder="Phone Number" required>
-
-<select name="service">
-
+<select>
+<option>Select Service</option>
 <option>Landscape Design</option>
-<option>Paver & Patio Installation</option>
-<option>Outdoor Lighting</option>
-<option>Garden & Backyard Design</option>
-<option>Stone Work</option>
-<option>Outdoor Construction</option>
-
+<option>Landscape Lighting</option>
+<option>Hardscape Construction</option>
+<option>Artificial Turf</option>
+<option>Irrigation Systems</option>
+<option>Outdoor Renovation</option>
 </select>
 
-<input type="text" name="address" placeholder="Property Address">
+<input type="text" placeholder="Property Address">
 
-<textarea name="message" placeholder="Tell us about your project"></textarea>
+<textarea placeholder="Tell us about your project"></textarea>
 
-<button class="submit">Submit Request</button>
-
-</form>
+<button>Submit Request</button>
 
 </div>
 
@@ -484,11 +465,11 @@ Call Now For Free Estimate
 
 <script>
 
-function openForm(){
+function openPopup(){
 document.getElementById("popup").style.display="flex";
 }
 
-function closeForm(){
+function closePopup(){
 document.getElementById("popup").style.display="none";
 }
 
@@ -496,4 +477,3 @@ document.getElementById("popup").style.display="none";
 
 </body>
 </html>
-```
