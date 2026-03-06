@@ -3,19 +3,29 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Cactus Landscaping | Professional Landscaping</title>
+<title>Cactus Landscaping LLC | Landscaping Services</title>
 
-<link href="https://images.unsplash.com/photo-1558904541-efa843a96f01" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
 
-body{background:#0f0f0f;color:white;}
+body{
+background:#0f0f0f;
+color:white;
+}
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+}
 
 /* NAV */
 
@@ -23,14 +33,16 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,.8);
+background:rgba(0,0,0,.85);
 padding:18px 40px;
 display:flex;
 justify-content:space-between;
 z-index:1000;
 }
 
-nav h2{color:#d4af37;}
+nav h2{
+color:#3ddc84;
+}
 
 nav a{
 color:white;
@@ -42,34 +54,49 @@ text-decoration:none;
 
 .hero{
 height:100vh;
-background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover fixed;
+background:url("https://images.unsplash.com/photo-1598902108854-10e335adac99") center/cover fixed;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
 }
 
 .hero-box{
 background:rgba(0,0,0,.6);
 padding:60px;
 border-radius:10px;
+max-width:700px;
 }
 
-.hero h1{font-size:55px;margin-bottom:20px;}
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+margin-bottom:25px;
+}
 
 .btn{
 padding:14px 28px;
 border:none;
 border-radius:30px;
 cursor:pointer;
-margin:10px;
 font-size:16px;
+margin:5px;
 }
 
-.primary{background:#d4af37;color:black;font-weight:600;}
+.primary{
+background:#3ddc84;
+color:black;
+font-weight:600;
+}
 
-.secondary{background:transparent;border:2px solid white;color:white;}
+.secondary{
+background:transparent;
+border:2px solid white;
+color:white;
+}
 
 /* SERVICES */
 
@@ -84,6 +111,7 @@ margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
+margin-top:40px;
 }
 
 .service{
@@ -92,15 +120,11 @@ padding:30px;
 border-radius:10px;
 }
 
-.service button{
-margin-top:15px;
-}
-
-/* WHY CHOOSE */
+/* WHY */
 
 .why{
-padding:100px 20px;
 background:#121212;
+padding:100px 20px;
 text-align:center;
 }
 
@@ -132,6 +156,7 @@ margin:auto;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
+margin-top:40px;
 }
 
 .review{
@@ -143,9 +168,9 @@ border-radius:10px;
 /* MAP */
 
 .map{
+background:#121212;
 padding:100px 20px;
 text-align:center;
-background:#121212;
 }
 
 .map iframe{
@@ -182,7 +207,7 @@ font-weight:bold;
 position:fixed;
 bottom:90px;
 right:25px;
-background:#d4af37;
+background:#3ddc84;
 color:black;
 padding:15px 20px;
 border-radius:50px;
@@ -231,7 +256,7 @@ font-size:22px;
 }
 
 .submit{
-background:#d4af37;
+background:#3ddc84;
 border:none;
 padding:12px;
 cursor:pointer;
@@ -240,16 +265,17 @@ font-weight:600;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
-<h2>Cactus Landscaping</h2>
+<h2>Cactus Landscaping LLC</h2>
 <div>
 <a href="#services">Services</a>
-<a href="#why">Why Us</a>
 <a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
@@ -258,11 +284,13 @@ font-weight:600;
 
 <div class="hero-box">
 
-<h1>Luxury Landscaping & Outdoor Design</h1>
+<h1>Professional Landscaping Services</h1>
+
+<p>4.9 ⭐ Rating — 27 Happy Customers</p>
 
 <button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 
-<a href="tel:+17135551234">
+<a href="tel:+14802700734">
 <button class="btn secondary">Call Now</button>
 </a>
 
@@ -274,8 +302,6 @@ font-weight:600;
 <section class="services" id="services">
 
 <h2>Our Services</h2>
-
-<br><br>
 
 <div class="service-grid">
 
@@ -314,7 +340,7 @@ font-weight:600;
 </section>
 
 
-<section class="why" id="why">
+<section class="why">
 
 <h2>Why Choose Us</h2>
 
@@ -341,20 +367,20 @@ font-weight:600;
 
 <div class="review">
 ⭐⭐⭐⭐⭐
-<p>Jesus and team are great. I've been using them for years. They did an excellent job.</p>
-<b>- Marc Smith</b>
+<p>Jesus and team are great. I've been using them for years and they did an excellent job.</p>
+<b>Marc Smith</b>
 </div>
 
 <div class="review">
 ⭐⭐⭐⭐⭐
-<p>Fast, efficient, and extremely thorough. Highly recommend.</p>
-<b>- Eddie Barajas</b>
+<p>Fast, efficient, and extremely thorough. Highly recommend this company.</p>
+<b>Eddie Barajas</b>
 </div>
 
 <div class="review">
 ⭐⭐⭐⭐
-<p>Good lawn maintenance service and reliable landscaping.</p>
-<b>- Brian Billings</b>
+<p>Good lawn maintenance and landscaping services overall.</p>
+<b>Brian Billings</b>
 </div>
 
 </div>
@@ -362,27 +388,29 @@ font-weight:600;
 </section>
 
 
-<section class="map">
+<section class="map" id="contact">
 
 <h2>Service Area</h2>
 
 <br>
 
-<iframe src="https://maps.google.com/maps?q=landscaping&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="https://maps.google.com/maps?q=Phoenix%20Arizona&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 Cactus Landscaping</p>
+<p>© 2026 Cactus Landscaping LLC</p>
+
+<p>📞 +1 480-270-0734</p>
 
 </footer>
 
 
 <div class="estimate-btn" onclick="openForm()">Get Free Estimate</div>
 
-<a href="tel:+17135551234" class="call-btn">📞 Call</a>
+<a href="tel:+14802700734" class="call-btn">📞 Call</a>
 
 
 <div class="popup" id="popup">
@@ -418,7 +446,7 @@ font-weight:600;
 
 <textarea name="message" placeholder="Tell us about your project"></textarea>
 
-<button class="submit">Submit</button>
+<button class="submit">Submit Request</button>
 
 </form>
 
