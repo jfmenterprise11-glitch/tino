@@ -5,30 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cactus Landscaping | Luxury Landscaping Services</title>
-
-<meta name="description" content="Professional landscaping, backyard design, lighting, patios and outdoor construction services.">
+<title>Cactus Landscaping | Professional Landscaping</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-html{
-scroll-behavior:smooth;
-}
+body{background:#0f0f0f;color:white;}
 
-body{
-background:#0f0f0f;
-color:white;
-line-height:1.6;
-}
+html{scroll-behavior:smooth;}
 
 /* NAV */
 
@@ -37,29 +24,23 @@ position:fixed;
 top:0;
 width:100%;
 background:rgba(0,0,0,.8);
-backdrop-filter:blur(8px);
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:18px 40px;
 z-index:1000;
 }
 
-nav h2{
-color:#d4af37;
-}
+nav h2{color:#d4af37;}
 
 nav a{
 color:white;
-text-decoration:none;
 margin-left:25px;
-font-weight:500;
+text-decoration:none;
 }
 
 /* HERO */
 
 .hero{
-
 height:100vh;
 background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover fixed;
 display:flex;
@@ -67,75 +48,28 @@ align-items:center;
 justify-content:center;
 text-align:center;
 padding:20px;
-
 }
 
-.hero-content{
-
+.hero-box{
 background:rgba(0,0,0,.6);
 padding:60px;
 border-radius:10px;
-max-width:900px;
-
 }
 
-.hero h1{
-font-size:55px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-}
+.hero h1{font-size:55px;margin-bottom:20px;}
 
 .btn{
-
-padding:14px 30px;
-border-radius:30px;
+padding:14px 28px;
 border:none;
+border-radius:30px;
 cursor:pointer;
 margin:10px;
 font-size:16px;
-
 }
 
-.primary{
-background:#d4af37;
-color:black;
-font-weight:600;
-}
+.primary{background:#d4af37;color:black;font-weight:600;}
 
-.secondary{
-background:transparent;
-border:2px solid white;
-color:white;
-}
-
-/* STATS */
-
-.stats{
-
-background:#121212;
-padding:70px 20px;
-text-align:center;
-
-}
-
-.stats-grid{
-
-max-width:900px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-
-}
-
-.stat h3{
-font-size:32px;
-color:#d4af37;
-}
+.secondary{background:transparent;border:2px solid white;color:white;}
 
 /* SERVICES */
 
@@ -144,212 +78,189 @@ padding:100px 20px;
 text-align:center;
 }
 
-.grid{
-
-max-width:1200px;
+.service-grid{
+max-width:1100px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
-
 }
 
-.card{
-
+.service{
 background:#1a1a1a;
 padding:30px;
-border-radius:12px;
-transition:.3s;
-
+border-radius:10px;
 }
 
-.card:hover{
-transform:translateY(-10px);
-background:#222;
+.service button{
+margin-top:15px;
 }
 
-/* GALLERY */
+/* WHY CHOOSE */
 
-.gallery{
-
+.why{
 padding:100px 20px;
 background:#121212;
 text-align:center;
-
 }
 
-.gallery-grid{
-
-max-width:1200px;
+.why-grid{
+max-width:900px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-.gallery img{
-
-width:100%;
-border-radius:10px;
+.why-box{
+background:#1a1a1a;
+padding:25px;
+border-radius:8px;
 }
 
 /* REVIEWS */
 
 .reviews{
-
 padding:100px 20px;
 text-align:center;
-
 }
 
 .review-grid{
-
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-
 }
 
 .review{
-
 background:#1a1a1a;
-padding:30px;
+padding:25px;
 border-radius:10px;
-
 }
 
 /* MAP */
 
 .map{
-
 padding:100px 20px;
 text-align:center;
 background:#121212;
-
 }
 
 .map iframe{
-
 width:90%;
 max-width:1000px;
 height:400px;
 border:0;
 border-radius:10px;
-
-}
-
-/* CONTACT */
-
-.contact{
-
-padding:100px 20px;
-text-align:center;
-
-}
-
-form{
-
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-
-}
-
-input,textarea{
-
-margin-bottom:15px;
-padding:12px;
-border-radius:6px;
-border:none;
-
-}
-
-.submit{
-
-background:#d4af37;
-color:black;
-font-weight:600;
-
 }
 
 /* FOOTER */
 
 footer{
-
 background:black;
-padding:50px 20px;
+padding:40px;
 text-align:center;
-
 }
 
 /* FLOAT BUTTONS */
 
 .call-btn{
-
 position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
 color:white;
-padding:16px 22px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
-
 }
 
 .estimate-btn{
-
 position:fixed;
 bottom:90px;
 right:25px;
 background:#d4af37;
 color:black;
-padding:16px 22px;
+padding:15px 20px;
 border-radius:50px;
 font-weight:bold;
-text-decoration:none;
+cursor:pointer;
+}
 
+/* POPUP FORM */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.popup-content{
+background:white;
+color:black;
+padding:40px;
+border-radius:10px;
+width:90%;
+max-width:450px;
+}
+
+.popup-content input,
+.popup-content textarea,
+.popup-content select{
+width:100%;
+margin-bottom:12px;
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:22px;
+}
+
+.submit{
+background:#d4af37;
+border:none;
+padding:12px;
+cursor:pointer;
+width:100%;
+font-weight:600;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
-
 <h2>Cactus Landscaping</h2>
-
 <div>
-
 <a href="#services">Services</a>
-<a href="#gallery">Projects</a>
+<a href="#why">Why Us</a>
 <a href="#reviews">Reviews</a>
-<a href="#contact">Estimate</a>
-
 </div>
-
 </nav>
 
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-box">
 
-<h1>Transform Your Outdoor Space</h1>
+<h1>Luxury Landscaping & Outdoor Design</h1>
 
-<p>Luxury landscaping, backyard design, lighting and construction trusted by homeowners.</p>
-
-<a href="#contact">
-<button class="btn primary">Free Estimate</button>
-</a>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 
 <a href="tel:+17135551234">
 <button class="btn secondary">Call Now</button>
@@ -360,66 +271,42 @@ text-decoration:none;
 </section>
 
 
-<section class="stats">
-
-<div class="stats-grid">
-
-<div class="stat">
-<h3>4.7 ⭐</h3>
-<p>Star Rating</p>
-</div>
-
-<div class="stat">
-<h3>100+</h3>
-<p>Happy Customers</p>
-</div>
-
-<div class="stat">
-<h3>10+</h3>
-<p>Years Experience</p>
-</div>
-
-</div>
-
-</section>
-
-
 <section class="services" id="services">
 
 <h2>Our Services</h2>
 
-<br>
+<br><br>
 
-<div class="grid">
+<div class="service-grid">
 
-<div class="card">
+<div class="service">
 <h3>Landscape Design</h3>
-<p>Custom landscape designs tailored to your property.</p>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Paver & Patio Installation</h3>
-<p>Premium patios and walkways built to last.</p>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Outdoor Lighting</h3>
-<p>Highlight your home with professional lighting.</p>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Garden & Backyard Design</h3>
-<p>Create the backyard oasis you've always wanted.</p>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Stone Work</h3>
-<p>Expert stone walls, paths and outdoor features.</p>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Outdoor Construction</h3>
-<p>Custom outdoor structures and improvement projects.</p>
+<button class="btn primary" onclick="openForm()">Get Free Estimate</button>
 </div>
 
 </div>
@@ -427,19 +314,19 @@ text-decoration:none;
 </section>
 
 
-<section class="gallery" id="gallery">
+<section class="why" id="why">
 
-<h2>Recent Projects</h2>
+<h2>Why Choose Us</h2>
 
-<br>
+<p>We're committed to delivering exceptional landscaping services that transform your outdoor space into a beautiful retreat you'll love for years to come.</p>
 
-<div class="gallery-grid">
+<div class="why-grid">
 
-<img src="https://images.unsplash.com/photo-1598902108854-10e335adac99">
-
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-
-<img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+<div class="why-box">Experienced Landscaping Team</div>
+<div class="why-box">High Quality Materials</div>
+<div class="why-box">Fast Project Completion</div>
+<div class="why-box">Attention to Detail</div>
+<div class="why-box">5-Star Customer Service</div>
 
 </div>
 
@@ -450,25 +337,23 @@ text-decoration:none;
 
 <h2>Customer Reviews</h2>
 
-<br>
-
 <div class="review-grid">
 
 <div class="review">
 ⭐⭐⭐⭐⭐
-<p>Jesus and team are great. They did an excellent cleanup and are trustworthy.</p>
+<p>Jesus and team are great. I've been using them for years. They did an excellent job.</p>
 <b>- Marc Smith</b>
 </div>
 
 <div class="review">
 ⭐⭐⭐⭐⭐
-<p>Fast, efficient and extremely thorough. Highly recommend.</p>
+<p>Fast, efficient, and extremely thorough. Highly recommend.</p>
 <b>- Eddie Barajas</b>
 </div>
 
 <div class="review">
 ⭐⭐⭐⭐
-<p>Reliable landscaping service and good maintenance.</p>
+<p>Good lawn maintenance service and reliable landscaping.</p>
 <b>- Brian Billings</b>
 </div>
 
@@ -488,11 +373,25 @@ text-decoration:none;
 </section>
 
 
-<section class="contact" id="contact">
+<footer>
 
-<h2>Request a Free Estimate</h2>
+<p>© 2026 Cactus Landscaping</p>
 
-<br>
+</footer>
+
+
+<div class="estimate-btn" onclick="openForm()">Get Free Estimate</div>
+
+<a href="tel:+17135551234" class="call-btn">📞 Call</a>
+
+
+<div class="popup" id="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closeForm()">✕</span>
+
+<h2>Get Free Estimate</h2>
 
 <form name="estimate" method="POST" data-netlify="true">
 
@@ -504,31 +403,41 @@ text-decoration:none;
 
 <input type="tel" name="phone" placeholder="Phone Number" required>
 
-<textarea name="message" placeholder="Describe your project"></textarea>
+<select name="service">
 
-<button class="submit">Submit Request</button>
+<option>Landscape Design</option>
+<option>Paver & Patio Installation</option>
+<option>Outdoor Lighting</option>
+<option>Garden & Backyard Design</option>
+<option>Stone Work</option>
+<option>Outdoor Construction</option>
+
+</select>
+
+<input type="text" name="address" placeholder="Property Address">
+
+<textarea name="message" placeholder="Tell us about your project"></textarea>
+
+<button class="submit">Submit</button>
 
 </form>
 
-</section>
+</div>
+
+</div>
 
 
-<footer>
+<script>
 
-<p>© 2026 Cactus Landscaping</p>
-<p>Professional Landscaping & Outdoor Construction</p>
+function openForm(){
+document.getElementById("popup").style.display="flex";
+}
 
-</footer>
+function closeForm(){
+document.getElementById("popup").style.display="none";
+}
 
-
-<a href="#contact" class="estimate-btn">
-Free Estimate
-</a>
-
-<a href="tel:+17135551234" class="call-btn">
-📞 Call Now
-</a>
-
+</script>
 
 </body>
 </html>
