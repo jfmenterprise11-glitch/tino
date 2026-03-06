@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cactus Landscaping | Professional Landscaping Services</title>
+<title>Cactus Landscaping | Luxury Landscaping Services</title>
 
-<meta name="description" content="Professional landscaping services including yard maintenance, garden design, outdoor lighting and construction.">
+<meta name="description" content="Professional landscaping, backyard design, lighting, patios and outdoor construction services.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -18,6 +18,10 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -32,12 +36,12 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.8);
-backdrop-filter:blur(10px);
-padding:15px 40px;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(8px);
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:18px 40px;
 z-index:1000;
 }
 
@@ -48,7 +52,7 @@ color:#d4af37;
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
 font-weight:500;
 }
 
@@ -57,29 +61,32 @@ font-weight:500;
 .hero{
 
 height:100vh;
-background:url("https://images.unsplash.com/photo-1558904541-efa843a96f01") center/cover fixed;
+background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover fixed;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 padding:20px;
 
 }
 
+.hero-content{
+
+background:rgba(0,0,0,.6);
+padding:60px;
+border-radius:10px;
+max-width:900px;
+
+}
+
 .hero h1{
 font-size:55px;
-max-width:900px;
+margin-bottom:15px;
 }
 
 .hero p{
-margin-top:15px;
 font-size:20px;
-max-width:700px;
-}
-
-.cta{
-margin-top:30px;
+margin-bottom:30px;
 }
 
 .btn{
@@ -96,6 +103,7 @@ font-size:16px;
 .primary{
 background:#d4af37;
 color:black;
+font-weight:600;
 }
 
 .secondary{
@@ -104,17 +112,36 @@ border:2px solid white;
 color:white;
 }
 
+/* STATS */
+
+.stats{
+
+background:#121212;
+padding:70px 20px;
+text-align:center;
+
+}
+
+.stats-grid{
+
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+
+}
+
+.stat h3{
+font-size:32px;
+color:#d4af37;
+}
+
 /* SERVICES */
 
 .services{
 padding:100px 20px;
 text-align:center;
-background:#121212;
-}
-
-.services h2{
-font-size:38px;
-margin-bottom:50px;
 }
 
 .grid{
@@ -131,7 +158,7 @@ gap:30px;
 
 background:#1a1a1a;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 transition:.3s;
 
 }
@@ -141,12 +168,39 @@ transform:translateY(-10px);
 background:#222;
 }
 
+/* GALLERY */
+
+.gallery{
+
+padding:100px 20px;
+background:#121212;
+text-align:center;
+
+}
+
+.gallery-grid{
+
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+border-radius:10px;
+}
+
 /* REVIEWS */
 
 .reviews{
+
 padding:100px 20px;
-background:#0f0f0f;
 text-align:center;
+
 }
 
 .review-grid{
@@ -170,8 +224,11 @@ border-radius:10px;
 /* MAP */
 
 .map{
+
 padding:100px 20px;
 text-align:center;
+background:#121212;
+
 }
 
 .map iframe{
@@ -184,12 +241,13 @@ border-radius:10px;
 
 }
 
-/* FORM */
+/* CONTACT */
 
 .contact{
+
 padding:100px 20px;
 text-align:center;
-background:#121212;
+
 }
 
 form{
@@ -210,7 +268,7 @@ border:none;
 
 }
 
-button.submit{
+.submit{
 
 background:#d4af37;
 color:black;
@@ -228,7 +286,7 @@ text-align:center;
 
 }
 
-/* FLOAT CALL */
+/* FLOAT BUTTONS */
 
 .call-btn{
 
@@ -237,11 +295,25 @@ bottom:25px;
 right:25px;
 background:#25D366;
 color:white;
-padding:15px 22px;
+padding:16px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
 box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+
+.estimate-btn{
+
+position:fixed;
+bottom:90px;
+right:25px;
+background:#d4af37;
+color:black;
+padding:16px 22px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
 
 }
 
@@ -258,6 +330,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 <div>
 
 <a href="#services">Services</a>
+<a href="#gallery">Projects</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Estimate</a>
 
@@ -268,11 +341,11 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 
 <section class="hero">
 
-<h1>Luxury Landscaping & Outdoor Design</h1>
+<div class="hero-content">
 
-<p>Trusted by homeowners for high-quality landscaping, maintenance, and outdoor design services.</p>
+<h1>Transform Your Outdoor Space</h1>
 
-<div class="cta">
+<p>Luxury landscaping, backyard design, lighting and construction trusted by homeowners.</p>
 
 <a href="#contact">
 <button class="btn primary">Free Estimate</button>
@@ -287,35 +360,61 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 </section>
 
 
+<section class="stats">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h3>4.7 ⭐</h3>
+<p>Star Rating</p>
+</div>
+
+<div class="stat">
+<h3>100+</h3>
+<p>Happy Customers</p>
+</div>
+
+<div class="stat">
+<h3>10+</h3>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+</section>
+
+
 <section class="services" id="services">
 
 <h2>Our Services</h2>
+
+<br>
 
 <div class="grid">
 
 <div class="card">
 <h3>Landscape Design</h3>
-<p>Custom landscaping designs tailored to your property and vision.</p>
+<p>Custom landscape designs tailored to your property.</p>
 </div>
 
 <div class="card">
-<h3>Garden & Backyard Design</h3>
-<p>Transform your outdoor space into a beautiful backyard oasis.</p>
-</div>
-
-<div class="card">
-<h3>Lawn Maintenance</h3>
-<p>Professional lawn care and maintenance services.</p>
+<h3>Paver & Patio Installation</h3>
+<p>Premium patios and walkways built to last.</p>
 </div>
 
 <div class="card">
 <h3>Outdoor Lighting</h3>
-<p>Professional lighting installation to showcase your property.</p>
+<p>Highlight your home with professional lighting.</p>
+</div>
+
+<div class="card">
+<h3>Garden & Backyard Design</h3>
+<p>Create the backyard oasis you've always wanted.</p>
 </div>
 
 <div class="card">
 <h3>Stone Work</h3>
-<p>Walls, paths, patios and decorative stone landscaping.</p>
+<p>Expert stone walls, paths and outdoor features.</p>
 </div>
 
 <div class="card">
@@ -328,27 +427,48 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 </section>
 
 
+<section class="gallery" id="gallery">
+
+<h2>Recent Projects</h2>
+
+<br>
+
+<div class="gallery-grid">
+
+<img src="https://images.unsplash.com/photo-1598902108854-10e335adac99">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+
+<img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+
+</div>
+
+</section>
+
+
 <section class="reviews" id="reviews">
 
 <h2>Customer Reviews</h2>
+
+<br>
 
 <div class="review-grid">
 
 <div class="review">
 ⭐⭐⭐⭐⭐
-<p>"Jesus and team are great. I've been using them for years. They did an excellent cleanup job and are trustworthy and fair."</p>
+<p>Jesus and team are great. They did an excellent cleanup and are trustworthy.</p>
 <b>- Marc Smith</b>
 </div>
 
 <div class="review">
 ⭐⭐⭐⭐⭐
-<p>"Fast, efficient, and extremely thorough. They go above and beyond to make sure every area of the yard is perfect."</p>
+<p>Fast, efficient and extremely thorough. Highly recommend.</p>
 <b>- Eddie Barajas</b>
 </div>
 
 <div class="review">
 ⭐⭐⭐⭐
-<p>"Good lawn maintenance service and reliable landscaping work."</p>
+<p>Reliable landscaping service and good maintenance.</p>
 <b>- Brian Billings</b>
 </div>
 
@@ -396,16 +516,19 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 <footer>
 
 <p>© 2026 Cactus Landscaping</p>
-<p>Professional Landscaping Services</p>
+<p>Professional Landscaping & Outdoor Construction</p>
 
 </footer>
 
 
-<a href="tel:+17135551234" class="call-btn">
-
-📞 Call Now
-
+<a href="#contact" class="estimate-btn">
+Free Estimate
 </a>
+
+<a href="tel:+17135551234" class="call-btn">
+📞 Call Now
+</a>
+
 
 </body>
 </html>
