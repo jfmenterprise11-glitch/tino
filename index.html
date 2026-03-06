@@ -102,20 +102,29 @@ text-align:center;
 background:transparent;
 }
 
-.service-grid{
-max-width:1100px;
-margin:auto;
+.contact-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+grid-template-columns:1fr 1fr;
+gap:40px;
 margin-top:40px;
+align-items:stretch;
 }
 
-.service{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(6px);
+.contact-grid iframe{
+height:400px;
+width:100%;
+border-radius:10px;
+}
+
+.contact-info{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(8px);
 padding:30px;
 border-radius:10px;
+height:400px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 /* WHY */
